@@ -27,11 +27,11 @@ The About Us page explains:
 - The vision for growth  
 - Core values such as professionalism, cleanliness, creativity, and customer satisfaction  
 
----
+
 
 ### 3. Gallery Page
 The gallery displays images of nail work including:
-- Acrylic nails  
+- Polygel-based nails  
 - Gel nails  
 - Manicure designs  
 - Nail art  
@@ -47,7 +47,7 @@ The contact page provides:
 - Email address: naominailstudio@gmail.com  
 - Physical address: Unit 14, Mmabatho, Mafikeng, North West  
 - Business operating hours  
-- A basic contact form for inquiries  
+ 
 
 
 
@@ -80,3 +80,12 @@ The purpose of this project is to:
 ## Author
 Naomi Nail Studio Website Project  
 Created for educational and business presentation purposes
+
+# change log
+18/04/2026
+
+added new images in the gallery folder, made few changes on the about us,images and created the required content.
+
+# Reference
+W3Schools.(2026, April 12). W3 SCHOOL.Retrieved from W3Schools:
+https://www.wescholl.com/html
