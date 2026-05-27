@@ -8,9 +8,32 @@
 /* BODY */
 body{
     font-family: Arial, sans-serif;
-    background-color:#FFF8F2; /* Warm cream */
-    color:#6E6E6E; /* Light grey */
+    background:#FFF8F2; /* Warm cream */
+    color:#1f1c1ca4; /* Light grey */
     line-height:1.6;
+    min-height: 100vh;
+
+}
+h1{
+    color:#C98C8C; /* Dusty rose */
+    font-size: 2.5rem;
+    font-weight: 700;
+h2{
+    color:#C98C8C; /* Dusty rose */
+    font-size: 2rem;
+    font-weight: 700;
+    border-bottom:1rem;
+    display:inline-block;
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+p{
+    color:#1f1c1ca4; /* Light grey */
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
 }
 
 /* HEADER */
@@ -24,6 +47,7 @@ header{
     position:sticky;
     top:0;
 }
+
 
 /* LOGO */
 .logo{
@@ -40,12 +64,26 @@ nav ul{
     display:flex;
     list-style:none;
 }
+.link{
+    text-decoration:none;
+    color:#6e6e6ef5;
+    font-weight:bold;
+    transition:0.3s;
+    border-bottom: underline 2px #6e6e6ef5;
 
-nav ul li{
+}
+a{
+    text-decoration:none;
+    color:#6e6e6ef5;
+    font-weight:bold;
+    transition:all 0.3s ease;
+}
+
+.nav li{
     margin-left:25px;
 }
 
-nav ul li a{
+.nav ul li a{
     text-decoration:none;
     color:#6e6e6ef5;
     font-weight:bold;
@@ -165,22 +203,7 @@ section{
     margin-bottom:20px;
 }
 
-/* GALLERY */
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
 
-.gallery img{
-    width:100%;
-    border-radius:15px;
-    transition:0.3s;
-}
-
-.gallery img:hover{
-    transform:scale(1.05);
-}
 
 /* ENQUIRY FORM */
 form{
@@ -229,7 +252,7 @@ footer{
     margin-top:50px;
 }
 
-/* RESPONSIVE DESIGN */
+
 @media(max-width:768px){
 
     header{
@@ -255,4 +278,19 @@ footer{
         flex-direction:column;
     }
 }
+
+     @media (max-width: 480px) {
+            header img {
+                width: 150px !important;
+            }
+            
+            .team-member img {
+                width: 100px !important;
+                height: 100px !important;
+            }
+            
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.3rem; }
+        }
+
 
