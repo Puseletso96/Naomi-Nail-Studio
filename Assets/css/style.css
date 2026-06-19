@@ -28,8 +28,8 @@ body {
 }
 /* Make sure datetime is visible */
 .datetime {
-    display: block !important;
-    visibility: visible !important;
+    display: block;
+    visibility: visible ;
     color: #333;
     font-size: 14px;
     padding: 10px 20px;
