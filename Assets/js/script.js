@@ -1,4 +1,4 @@
-// ============================================
+/// ============================================
 // NAOMI NAIL-STUDIO - Complete JavaScript
 // ============================================
 
@@ -7,34 +7,28 @@
 // ============================================
 function updateDateTime() {
     const now = new Date();
+    
+    // Format: "Friday, 19 June 2026 at 21:28:35"
     const options = {
         weekday: 'long',
-        year: 'numeric',
-        month: 'long',
         day: 'numeric',
+        month: 'long',
+        year: 'numeric',
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
         hour12: false
     };
     
-    const dateStr = now.toLocaleDateString('en-US', options);
-    const timeStr = now.toLocaleTimeString('en-US', { 
-        hour12: false,
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
-    });
-    
     const datetimeElement = document.getElementById('datetime');
     if (datetimeElement) {
-        datetimeElement.textContent = dateStr + ' at ' + timeStr;
+        // Using toLocaleString with all options at once - no duplicate
+        datetimeElement.textContent = now.toLocaleString('en-US', options);
     }
 }
 
-// Update immediately (only once)
+// Update immediately (only once - no duplicate)
 updateDateTime();
-// No setInterval - static display
 
 // ============================================
 // Wait for the DOM to fully load before executing
@@ -42,23 +36,28 @@ updateDateTime();
 document.addEventListener('DOMContentLoaded', function() {
     
     // ============================================
-    // 1. MOBILE MENU TOGGLE
+    // 1. MOBILE MENU TOGGLE - ACTIVATED
     // ============================================
     const menuBtn = document.getElementById('menuBtn');
     const navbar = document.getElementById('navbar');
 
     if (menuBtn && navbar) {
+        // Toggle menu on button click
         menuBtn.addEventListener('click', function(e) {
             e.stopPropagation();
             navbar.classList.toggle('active');
             
             // Toggle icon between bars and times
             const icon = menuBtn.querySelector('i');
+            const menuText = menuBtn.querySelector('.menu-text');
+            
             if (icon) {
                 if (navbar.classList.contains('active')) {
                     icon.className = 'fas fa-times';
+                    if (menuText) menuText.textContent = 'Close';
                 } else {
                     icon.className = 'fas fa-bars';
+                    if (menuText) menuText.textContent = 'Menu';
                 }
             }
         });
@@ -71,8 +70,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 !menuBtn.contains(e.target)) {
                 navbar.classList.remove('active');
                 const icon = menuBtn.querySelector('i');
+                const menuText = menuBtn.querySelector('.menu-text');
                 if (icon) {
                     icon.className = 'fas fa-bars';
+                    if (menuText) menuText.textContent = 'Menu';
                 }
             }
         });
@@ -83,15 +84,17 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', function() {
                 navbar.classList.remove('active');
                 const icon = menuBtn.querySelector('i');
+                const menuText = menuBtn.querySelector('.menu-text');
                 if (icon) {
                     icon.className = 'fas fa-bars';
+                    if (menuText) menuText.textContent = 'Menu';
                 }
             });
         });
     }
 
     // ============================================
-    // 2. NEWSLETTER POPUP (MOVED OUTSIDE MENU)
+    // 2. NEWSLETTER POPUP
     // ============================================
     const popup = document.getElementById("newsletterPopup");
     const closePopup = document.getElementById("closePopup");
@@ -207,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function() {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #d4a0a0;
+            background: #9c6b98;
             color: white;
             border: none;
             border-radius: 50%;
@@ -222,11 +225,11 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         
         scrollBtn.addEventListener('mouseenter', function() {
-            this.style.background = '#b88383';
+            this.style.background = '#d4a373';
             this.style.transform = 'scale(1.05)';
         });
         scrollBtn.addEventListener('mouseleave', function() {
-            this.style.background = '#d4a0a0';
+            this.style.background = '#9c6b98';
             this.style.transform = 'scale(1)';
         });
         
@@ -251,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // 8. STICKY HEADER
     // ============================================
-    const header = document.querySelector('.header');
+    const header = document.querySelector('header');
     
     if (header) {
         window.addEventListener('scroll', function() {
@@ -270,8 +273,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.key === 'Escape' && navbar && navbar.classList.contains('active')) {
             navbar.classList.remove('active');
             const icon = menuBtn.querySelector('i');
+            const menuText = menuBtn.querySelector('.menu-text');
             if (icon) {
                 icon.className = 'fas fa-bars';
+                if (menuText) menuText.textContent = 'Menu';
             }
         }
     });
@@ -279,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // 10. CONSOLE WELCOME
     // ============================================
-    console.log('%c💅 Naomi Nail-Studio', 'font-size: 24px; font-weight: bold; color: #d4a0a0;');
+    console.log('%c💅 Naomi Nail-Studio', 'font-size: 24px; font-weight: bold; color: #9c6b98;');
     console.log('%cBeauty • Elegance • Confidence', 'font-size: 16px; color: #666;');
     console.log('%c✨ Thank you for visiting! ✨', 'font-size: 14px; color: #888;');
 
