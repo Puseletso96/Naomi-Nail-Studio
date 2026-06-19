@@ -3,110 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Naomi Nail-Studio - Enquiry</title>
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="../Assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+
     <header>
-    <table width="100%">
-            <tr>
-          <td align="left">
-            <div id = "logo">
-             <img id = "logo-image" src="/Assets/images/logo.jpeg" alt=" Naomi Nail-Studio Logo" style="width:80px;height:auto;">
-             </div>          
-            </td>
-                
-        <td align="right">
-                        <nav>
-                            <div class="links"> 
-                        <a href="../index.html">HOME</a>
-                        <a href="./about_us.html">ABOUT US</a>
-                        <a href="./services.html">SERVICE</a>
-                        <a href="./gallery.html">GALLERY</a>
-                        <a href="./contact_us.html">CONTACT US</a>
-                        <a href="./enquiry.html">ENQUIRY</a>
-                           </div>
-                        </nav>  
-                    </td>
-               </tr>           
-            </table>
-   
-    </header>
-    <main>
-        <hr>
-   
-    <h1>Naomi Nail Studio</h1>
-    <h2>Enquiry Form</h2>
-
-    <p>Please fill in the form below to make an enquiry about our services.</p>
-
-    <form>
-
-        <p>
-            <label>Full Name:</label><br>
-            <input type="text" name="fullname">
-        </p>
-
-        <p>
-            <label>Email Address:</label><br>
-            <input type="email" name="email">
-        </p>
-
-        <p>
-            <label>Phone Number:</label><br>
-            <input type="tel" name="phone">
-        </p>
-
-        <p>
-            <label>Select Service:</label><br>
-            <select name="service">
-                <option>Manicure</option>
-                <option>Pedicure</option>
-                <option>polygel-based Nails</option>
-                <option>Gel Nails</option>
-                <option>Nail Art</option>
-            </select>
-        </p>
-
-        <p>
-            <label>Preferred Date:</label><br>
-            <input type="date" name="date">
-        </p>
-
-        <p>
-            <label>Your Message:</label><br>
-            <textarea name="message" rows="5" cols="30"></textarea>
-        </p>
-
-        <p>
-            <input type="submit" value="Submit Enquiry">
-            <input type="reset" value="Clear Form">
-        </p>
-
-    </form>
-
-    <hr>
-    <!--footer-->
-<footer>       
-    <div class="footer-container">
-
-        <div class="footer-logo">
-            <p>Beauty • Elegance • Confidence</p>
+        <div id="logo">
+            <img id="logo-image" src="../assets/images/logo.jpeg" alt="Naomi Nail-Studio Logo">
+            <span id="logo-name">Naomi Nail-Studio</span>
         </div>
 
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-            <a href="enquiry.html">Enquiry</a>
-        </div>    
-    </div>
-    
-<footer class="copyright" style="text-align: center;">
-        <p>&copy; 2026 Naomi Nail-Studio. All rights reserved. 
+        <button class="menu-btn" id="menuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="navbar" id="navbar">
+            <a href="../index.html">HOME</a>
+            <a href="about_us.html">ABOUT US</a>
+            <a href="services.html">SERVICES</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="contact_us.html">CONTACT US</a>
+            <a href="enquiry.html" class="active-link">ENQUIRY</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <h1>Naomi Nail Studio</h1>
+        <h2>Enquiry Form</h2>
+        <p>Please fill in the form below to make an enquiry about our services.</p>
+
+        <form>
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+                <label for="service">Select Service:</label>
+                <select id="service" name="service">
+                    <option value="">-- Select a service --</option>
+                    <option value="manicure">Manicure</option>
+                    <option value="pedicure">Pedicure</option>
+                    <option value="polygel">Polygel-based Nails</option>
+                    <option value="gel">Gel Nails</option>
+                    <option value="nailart">Nail Art</option>
+                    <option value="nailrepair">Nail Repair</option>
+                    <option value="foottreatment">Foot Treatment</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Type your message here..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Submit Enquiry</button>
+                <button type="reset" class="reset-btn">Clear Form</button>
+            </div>
+        </form>
+    </main>
+
+    <hr>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Naomi Nail-Studio</h3>
+                <p>Beauty • Elegance • Confidence</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Phone: +27 66 249 3691</p>
+                <p>Email: naominailstudio@gmail.com</p>
+                <p>Address: Unit 14, Mmabatho, Mafikeng</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Naomi Nail-Studio. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>

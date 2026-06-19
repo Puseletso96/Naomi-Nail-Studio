@@ -4,69 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Naomi Nail-Studio - Home</title>
- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="./assets/css/style.css">
-</head>
-
-<body>
-    <header>
+    <title>Naomi Nail-Studio - Home</title>
     
-        <tr>
-            <td align="left">
-                <div id="logo">
-                <img id="logo-image" src="./assets/images/logo.jpeg" alt="Naomi Nail-Studio Logo" style="width:80px;">
-                </div>
-            </td>
-            <td align="right">
-                <nav>
-                    <div class="links">
-                    <a href="index.html">HOME</a>
-                    <a href="./pages/about_us.html">ABOUT US</a>
-                    <a href="./pages/services.html">SERVICES</a>
-                    <a href="./pages/gallery.html">GALLERY</a>
-                    <a href="./pages/contact_us.html">CONTACT US</a>
-                    <a href="./pages/enquiry.html">ENQUIRY</a>
-                    </div>
-                </nav>
-            <td>
-        </tr>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
 
-    </table>
-    <hr>
-    </header>
-    <main>
-        <section>
-             <h1>Welcome to Naomi Nail-Studio</h1>
-             <p> Naomi Nail Studio is a beauty-focused business specializing in high-quality nail care services including manicures, pedicures, gel applications, and creative nail art. The studio is designed to provide a relaxing, hygienic, and stylish environment where clients can enjoy premium beauty treatments.</p>
-            <!--adding the home interior-->
-            <section>
-                <div>
-                <img src="./Assets/images/interior.jpg" alt="Studio Interior" width="100%" height= 100%> 
-                </div>           
-        </section>                  
-            <br/>
-            <hr>
-    </main>
-    <footer>       
-    <div class="footer-container">
-
-        <div class="footer-logo">
-            <p>Beauty • Elegance • Confidence</p>
+    <!-- ============================================
+    HEADER
+    ============================================ -->
+    <header>
+        <div id="logo">
+            <img id="logo-image" src="./assets/images/logo.jpeg" alt="Naomi Nail-Studio Logo">
+            <span id="logo-name">Naomi Nail-Studio</span>
         </div>
 
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-            <a href="enquiry.html">Enquiry</a>
-        </div>    
-    </div>
-    
-<footer class="copyright" style="text-align: center;">
-        <p>&copy; 2026 Naomi Nail-Studio. All rights reserved. 
+        <!-- Mobile Menu Button (Font Awesome) -->
+        <button class="menu-btn" id="menuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="active-link">HOME</a>
+            <a href="./pages/about_us.html">ABOUT US</a>
+            <a href="./pages/services.html">SERVICES</a>
+            <a href="./pages/gallery.html">GALLERY</a>
+            <a href="./pages/contact_us.html">CONTACT US</a>
+            <a href="./pages/enquiry.html">ENQUIRY</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- ============================================
+    MAIN CONTENT
+    ============================================ -->
+    <main>
+        <h1>Welcome to Naomi Nail-Studio</h1>
+        <p>Naomi Nail Studio is a beauty-focused business specializing in high-quality nail care services including manicures, pedicures, gel applications, and creative nail art. The studio is designed to provide a relaxing, hygienic, and stylish environment where clients can enjoy premium beauty treatments.</p>
+
+        <div class="interior">
+            <img id="image" src="./assets/images/interior.jpg" alt="Studio Interior">
+        </div>
+    </main>
+
+    <!-- ============================================
+    FOOTER
+    ============================================ -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Naomi Nail-Studio</h3>
+                <p>Beauty • Elegance • Confidence</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="./pages/about_us.html">About Us</a></li>
+                    <li><a href="./pages/services.html">Services</a></li>
+                    <li><a href="./pages/gallery.html">Gallery</a></li>
+                    <li><a href="./pages/contact_us.html">Contact</a></li>
+                    <li><a href="./pages/enquiry.html">Enquiry</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Phone: +27 82 123 4567</p>
+                <p>Email: info@naominailstudio.co.za</p>
+                <p>Address: Polokwane, South Africa</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Naomi Nail-Studio. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- JavaScript loaded at the bottom -->
+    <script src="./assets/js/script.js"></script>
+    <!-- Newsletter Popup -->
+<div class="popup-overlay" id="newsletterPopup">
+    <div class="popup-box">
+        <span class="close-btn" id="closePopup">&times;</span>
+
+        <h2>Welcome to Naomi Nail Studio 💅</h2>
+
+        <p>
+            Enjoy <strong>10% OFF</strong> your first appointment when you
+            subscribe to our newsletter!
+        </p>
+
+        <form id="newsletterForm">
+            <input
+                type="email"
+                id="emailInput"
+                placeholder="Enter your email address"
+                required
+            >
+
+            <button type="submit">
+                Subscribe Now
+            </button>
+        </form>
+
+        <a href="#" id="skipPopup">
+            No thanks, continue to site
+        </a>
+    </div>
+</div>
 </body>
 </html>

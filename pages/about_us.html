@@ -3,143 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about_us</title>
+    <title>Naomi Nail-Studio - About Us</title>
+    
+    <!-- Font Awesome for Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="../Assets/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-<header>
-    <table width="100%">
-            <tr>
-          <td align="left">
-            <div id = "logo">
-             <img id = "logo-image" src="/Assets/images/logo.jpeg" alt=" Naomi Nail-Studio Logo" style="width:80px;height:auto;">
-             </div>          
-            </td>
-                
-        <td align="right">
-                        <nav>
-                            <div class="links"> 
-                        <a href="../index.html">HOME</a>
-                        <a href="./about_us.html">ABOUT US</a>
-                        <a href="./services.html">SERVICE</a>
-                        <a href="./gallery.html">GALLERY</a>
-                        <a href="./contact_us.html">CONTACT US</a>
-                        <a href="./enquiry.html">ENQUIRY</a>
-                        </div>
-                        </nav>  
-                    </td>
-               </tr>           
-            </table>
-   
-    </header>
-    
 
-    <!-- About Us Section -->
-    <section class>
-        <h1 style="text-align: center;">ABOUT US</h1>
-        <hr>
-
-        <table>
-            <tr>
-                <td>
-                    <div class="interior-image-container">
-                        <img src="/Assets/images/interior.jpg" alt="Studio Interior" width="100%" height= 100%>
-                    </div>
-                </td>
-                <td>
-                    <p>
-                       NAOMI NAIL STUDIO is a fictional nail salon created to provide high-quality nail care and artistic designs for clients. The brand is inspired by modern beauty trends, focusing on relaxation, creativity, and personal expression. It aims to offer a clean, comfortable, and stylish space where clients can enjoy professional nail services in a welcoming atmosphere.
-                    </p>
-                </td>
-            </tr>
-        </table>
-
-        <hr>
-    <h2 align="center">OUR STORY</h2>
-   <P>Naomi Nail Studio is founded by a passionate and skilled nail technician dedicated to enhancing beauty and boosting confidence. The studio focuses on:
-    The goal is to build a strong brand reputation within the Mafikeng and Mmabatho community and eventually expand into a full-service beauty studio
-   </P>
-   <ul align="center">
-       <li>Customer satisfaction</li> 
-	   <li>Creativity and modern nail trends</li>
-	   <li>Professional hygiene standards</li>
-
-    </ul>
-        <!-- Mission -->
-         
-        <h2 style="text-align: center;">OUR MISSION</h2>
-          <P>At Naomi Nail Studio, our mission is to deliver exceptional nail artistry and hygiene-focused services while creating a relaxing, empowering experience that makes every client feel beautiful and valued
-        </p>
-
-        <hr>
-
-        <!-- Vision -->
-        <h2 style="text-align: center;">OUR VISION</h2>
-        <p>
-              To become a trusted and recognized nail studio brand known for creativity, quality, and outstanding customer care.
-        </p>
-
-        <hr>
-        
-
-    <h2 style="text-align:center;">Meet Our Team</h2>
-
-    <table align="center" cellpadding="20">
-        <tr>
-            <!-- Team Member 1 -->
-            <td align="center">
-                <img src="/Assets/images/Naomi the founder.jpeg" alt="Team Member 1" width="150" height="150" style="border-radius:50%;">
-                <h3>Naomi</h3>
-                <p>Founder & Nail Technician</p>
-            </td>
-
-            <!-- Team Member 2 -->
-            <td align="center">
-                <img src="/Assets/images/Puseletso.jpeg" alt="Team Member 2" width="150" height="150" style="border-radius:50%;">
-                <h3>Puseletso</h3>
-                <p>Nail Artist</p>
-            </td>
-
-        </tr>
-    </table>
-    <hr>
-
-
-        <!-- Core Values -->
-        <h2 style="text-align: center;">CORE VALUES</h2>
-        <ul>
-            <li>Professionalism</li>
-            <li>Cleanliness</li>
-            <li>Creativity</li>
-            <li>Customer Care</li>
-            <li>Quality Service</li>
-        </ul>
-    </section>
-
-    <hr>
-
-    <!-- Footer -->
-    <footer>       
-    <div class="footer-container">
-
-        <div class="footer-logo">
-            <p>Beauty • Elegance • Confidence</p>
+    <!-- ============================================
+    HEADER - FIXED
+    ============================================ -->
+    <header>
+        <div id="logo">
+            <img id="logo-image" src="../assets/images/logo.jpeg" alt="Naomi Nail-Studio Logo">
+            <span id="logo-name">Naomi Nail-Studio</span>
         </div>
 
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-            <a href="enquiry.html">Enquiry</a>
-        </div>    
-    </div>
-    
-<footer class="copyright" style="text-align: center;">
-        <p>&copy; 2026 Naomi Nail-Studio. All rights reserved. 
+        <!-- Mobile Menu Button (Font Awesome) -->
+        <button class="menu-btn" id="menuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <a href="../index.html">HOME</a>
+            <a href="about_us.html" class="active-link">ABOUT US</a>
+            <a href="services.html">SERVICES</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="contact_us.html">CONTACT US</a>
+            <a href="enquiry.html">ENQUIRY</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- ============================================
+    MAIN CONTENT - ABOUT US
+    ============================================ -->
+    <main>
+        <!-- About Us Section -->
+        <section class="about-section">
+            <h1>About Us</h1>
+            <hr>
+
+            <div class="interior">
+                <img src="../assets/images/interior.jpg" alt="Naomi Nail-Studio Interior">
+            </div>
+
+            <p>
+                NAOMI NAIL STUDIO is a fictional nail salon created to provide high-quality nail care and artistic designs for clients. The brand is inspired by modern beauty trends, focusing on relaxation, creativity, and personal expression. It aims to offer a clean, comfortable, and stylish space where clients can enjoy professional nail services in a welcoming atmosphere.
+            </p>
+
+            <hr>
+
+            <h2>Our Story</h2>
+            <p>
+                Naomi Nail Studio is founded by a passionate and skilled nail technician dedicated to enhancing beauty and boosting confidence. The studio focuses on:
+            </p>
+            <ul class="values-list">
+                <li>Customer satisfaction</li>
+                <li>Creativity and modern nail trends</li>
+                <li>Professional hygiene standards</li>
+            </ul>
+
+            <hr>
+
+            <!-- Mission -->
+            <h2>Our Mission</h2>
+            <p>
+                At Naomi Nail Studio, our mission is to deliver exceptional nail artistry and hygiene-focused services while creating a relaxing, empowering experience that makes every client feel beautiful and valued.
+            </p>
+
+            <hr>
+
+            <!-- Vision -->
+            <h2>Our Vision</h2>
+            <p>
+                To become a trusted and recognized nail studio brand known for creativity, quality, and outstanding customer care.
+            </p>
+
+            <hr>
+
+            <!-- Core Values -->
+            <h2>Core Values</h2>
+            <ul class="values-list">
+                <li>Professionalism</li>
+                <li>Cleanliness</li>
+                <li>Creativity</li>
+                <li>Customer Care</li>
+                <li>Quality Service</li>
+            </ul>
+
+            <hr>
+
+            <!-- Meet Our Team -->
+            <h2>Meet Our Team</h2>
+
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="../assets/images/Naomi the founder.jpeg"alt="Naomi-founder"width="150" height="150">
+                    <h3>Naomi</h3>
+                    <p>Founder &amp; Nail Technician</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="../assets/images/puseletso.jpeg" alt="Puseletso - Nail Artist" width="150" height="150">
+                    <h3>Puseletso</h3>
+                    <p>Nail Artist</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <hr>
+
+    <!-- ============================================
+    FOOTER - FIXED
+    ============================================ -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Naomi Nail-Studio</h3>
+                <p>Beauty • Elegance • Confidence</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Phone: +27 66 249 3691</p>
+                <p>Email: naominailstudio@gmail.com</p>
+                <p>Address: Unit 14, Mmabatho, Mafikeng</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Naomi Nail-Studio. All rights reserved.</p>
+        </div>
     </footer>
 
+    <!-- JavaScript loaded at the bottom -->
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>

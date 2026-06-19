@@ -259,3 +259,102 @@ The purpose of Naomi Nail Studio is to:
 - Improve customer communication
 - Create an elegant online presence
 - Support mobile and desktop users
+
+# change log
+19/06/2026
+
+Naomi Nail Studio Website
+
+Project Overview
+
+Naomi Nail Studio is a responsive business website designed to showcase nail care services, pricing, gallery images, and company information. The website is optimized for desktop, tablet, and mobile devices and provides an interactive and user-friendly experience.
+
+
+
+# technologies used
+
+* HTML5
+* CSS3
+* JavaScript (ES6)
+* Font Awesome Icons
+
+
+
+JavaScript Features
+
+The script.js file enhances the functionality of the website by implementing the following features:
+
+1. Mobile Menu Toggle
+
+* Displays a hamburger menu on smaller screens.
+* Opens and closes the navigation menu.
+* Changes the menu icon from bars to a close icon.
+* Closes the menu when clicking outside of it.
+* Automatically closes the menu after selecting a navigation link.
+
+2. Active Navigation Link Highlighting
+
+* Detects the current page.
+* Highlights the corresponding navigation link.
+* Improves website navigation and user orientation.
+
+3. Smooth Scrolling
+
+* Enables smooth scrolling when navigating to page sections using anchor links.
+
+4. Image Fade-In Effect
+
+* Adds a fade-in animation when images finish loading.
+* Improves visual presentation and user experience.
+
+5. Automatic Copyright Year Update
+
+* Dynamically updates the copyright year using the current date.
+* Eliminates the need for manual yearly updates.
+
+6. Scroll-to-Top Button
+
+* Creates a floating button that appears when the user scrolls down.
+* Smoothly returns the user to the top of the page.
+* Includes hover effects for better interaction.
+
+7. Sticky Header
+
+* Keeps the website header visible while scrolling.
+* Improves accessibility and navigation.
+
+8. Keyboard Accessibility
+
+* Allows users to close the mobile navigation menu using the Escape (Esc) key.
+* Enhances accessibility for keyboard users.
+
+9. Developer Console Messages
+
+* Displays branded welcome messages in the browser console.
+* Assists with development and debugging.
+
+
+ # Project structure
+
+Naomi-Nail-Studio/
+│
+├── index.html
+├── about.html
+├── services.html
+├── gallery.html
+├── contact.html
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   │
+│   ├── js/
+│   │   └── script.js
+│   │
+│   └── images/
+│
+└── README.md
+
+# Reference
+W3Schools.(2026, june 18). W3 SCHOOL.Retrieved from W3Schools:
+https://www.wescholl.com/html
