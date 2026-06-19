@@ -144,6 +144,8 @@ header {
     align-items: center;
     gap: 8px;
     border-radius: 8px;
+    z-index: 101;
+    position: relative;
 }
 
 .menu-btn:hover {
@@ -866,7 +868,7 @@ form {
     }
 }
 
-/* Tablet Portrait (768px - 481px) */
+/* Tablet Portrait (768px - 481px) - MOBILE MENU ACTIVATED */
 @media screen and (max-width: 768px) {
     body {
         padding: 12px;
@@ -878,6 +880,8 @@ form {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        position: sticky;
+        top: 0;
     }
 
     #logo-image {
@@ -889,50 +893,97 @@ form {
         font-size: 1.2rem;
     }
 
-    /* Show mobile menu button */
+    /* ==========================================
+       SHOW MOBILE MENU BUTTON - FIXED
+       ========================================== */
+    
     .menu-btn {
-        display: flex;
+        display: flex !important;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 15px;
+        font-size: 1.8rem;
+        background: rgba(156, 107, 152, 0.1);
+        border-radius: 10px;
+        border: 2px solid #9c6b98;
+        color: #9c6b98;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 101;
+        position: relative;
+        order: 2;
     }
 
-    /* Hide navigation by default on mobile */
+    .menu-btn:hover {
+        background: rgba(156, 107, 152, 0.2);
+        transform: scale(1.02);
+    }
+
+    .menu-btn:active {
+        transform: scale(0.95);
+    }
+
+    .menu-btn .menu-text {
+        font-size: 0.85rem;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        color: #9c6b98;
+    }
+
+    /* ==========================================
+       MOBILE NAVIGATION - FIXED
+       ========================================== */
+
     .navbar {
-        display: none;
+        display: none !important;
         position: absolute;
-        top: 75px;
+        top: 100%;
         left: 0;
         width: 100%;
         background: #f7d6e0;
         flex-direction: column;
         text-align: center;
         padding: 20px 0;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         border-radius: 0 0 15px 15px;
-        gap: 10px;
-        z-index: 99;
+        gap: 5px;
+        z-index: 1000;
+        border-top: 2px solid #d4a373;
     }
 
     .navbar.active {
-        display: flex;
+        display: flex !important;
     }
 
     .navbar a {
         display: block;
-        width: 100%;
-        padding: 12px 20px;
+        width: 90%;
+        margin: 0 auto;
+        padding: 14px 20px;
         border-radius: 8px;
+        font-size: 1rem;
+        text-align: center;
+        color: #5c4a4a;
+        border-bottom: 1px solid rgba(156, 107, 152, 0.1);
+        transition: all 0.2s ease;
+    }
+
+    .navbar a:last-child {
         border-bottom: none;
     }
 
     .navbar a:hover {
-        background: rgba(232, 160, 191, 0.2);
+        background: rgba(232, 160, 191, 0.3);
         transform: none;
+        color: #9c6b98;
         padding-left: 25px;
     }
 
     .navbar a.active-link {
-        background: rgba(232, 160, 191, 0.2);
-        border-bottom: none;
+        background: rgba(232, 160, 191, 0.3);
+        border-bottom: 2px solid #e8a0bf;
         border-left: 3px solid #e8a0bf;
+        border-radius: 8px;
     }
 
     main {
@@ -1007,7 +1058,7 @@ form {
     }
 }
 
-/* Mobile (480px and below) */
+/* Mobile (480px and below) - HIDE MENU TEXT */
 @media screen and (max-width: 480px) {
     body {
         padding: 10px;
@@ -1030,17 +1081,26 @@ form {
         font-size: 1rem;
     }
 
+    /* Hide menu text on very small screens - show only icon */
     .menu-btn .menu-text {
         display: none;
     }
 
+    .menu-btn {
+        padding: 8px 12px;
+        font-size: 1.5rem;
+        border-width: 1.5px;
+    }
+
     .navbar {
-        top: 65px;
+        top: 100%;
+        padding: 15px 0;
     }
 
     .navbar a {
         font-size: 0.9rem;
-        padding: 10px 15px;
+        padding: 12px 15px;
+        width: 95%;
     }
 
     main {
@@ -1190,5 +1250,10 @@ form {
     .team-member img {
         width: 80px;
         height: 80px;
+    }
+
+    .menu-btn {
+        padding: 6px 10px;
+        font-size: 1.3rem;
     }
 }

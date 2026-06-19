@@ -1,10 +1,12 @@
-/// ============================================
-// NAOMI NAIL-STUDIO - Complete JavaScript
+// ============================================
+// NAOMI NAIL-STUDIO - COMPLETE JAVASCRIPT
+// All Pages: Home, About, Services, Gallery, Contact, Enquiry
 // ============================================
 
 // ============================================
 // 0. DATETIME DISPLAY - Runs immediately
 // ============================================
+
 function updateDateTime() {
     const now = new Date();
     
@@ -22,34 +24,43 @@ function updateDateTime() {
     
     const datetimeElement = document.getElementById('datetime');
     if (datetimeElement) {
-        // Using toLocaleString with all options at once - no duplicate
         datetimeElement.textContent = now.toLocaleString('en-US', options);
     }
 }
 
-// Update immediately (only once - no duplicate)
+// Update immediately
 updateDateTime();
 
 // ============================================
 // Wait for the DOM to fully load before executing
 // ============================================
+
 document.addEventListener('DOMContentLoaded', function() {
     
+    console.log('Naomi Nail-Studio JavaScript loaded!');
+    
     // ============================================
-    // 1. MOBILE MENU TOGGLE - ACTIVATED
+    // 1. HAMBURGER MENU TOGGLE
     // ============================================
+    
     const menuBtn = document.getElementById('menuBtn');
     const navbar = document.getElementById('navbar');
-
+    
+    console.log('menuBtn found:', menuBtn ? '✅ Yes' : '❌ No');
+    console.log('navbar found:', navbar ? '✅ Yes' : '❌ No');
+    
     if (menuBtn && navbar) {
+        console.log('Both elements found! Adding click listener...');
+        
         // Toggle menu on button click
         menuBtn.addEventListener('click', function(e) {
             e.stopPropagation();
+            console.log('Menu button clicked!');
             navbar.classList.toggle('active');
             
             // Toggle icon between bars and times
-            const icon = menuBtn.querySelector('i');
-            const menuText = menuBtn.querySelector('.menu-text');
+            const icon = this.querySelector('i');
+            const menuText = this.querySelector('.menu-text');
             
             if (icon) {
                 if (navbar.classList.contains('active')) {
@@ -68,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 !navbar.contains(e.target) && 
                 e.target !== menuBtn && 
                 !menuBtn.contains(e.target)) {
+                
                 navbar.classList.remove('active');
                 const icon = menuBtn.querySelector('i');
                 const menuText = menuBtn.querySelector('.menu-text');
@@ -91,38 +103,46 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+        
+    } else {
+        console.log('Menu elements not found!');
+        console.log('menuBtn:', menuBtn);
+        console.log('navbar:', navbar);
     }
 
     // ============================================
     // 2. NEWSLETTER POPUP
     // ============================================
-    const popup = document.getElementById("newsletterPopup");
-    const closePopup = document.getElementById("closePopup");
-    const skipPopup = document.getElementById("skipPopup");
-    const newsletterForm = document.getElementById("newsletterForm");
+    
+    const popup = document.getElementById('newsletterPopup');
+    const closePopup = document.getElementById('closePopup');
+    const skipPopup = document.getElementById('skipPopup');
+    const newsletterForm = document.getElementById('newsletterForm');
 
     if (popup && closePopup && skipPopup && newsletterForm) {
+        console.log('Popup elements found!');
+        
         // Show popup after 3 seconds
-        setTimeout(() => {
-            popup.classList.add("show");
+        setTimeout(function() {
+            popup.classList.add('show');
         }, 3000);
 
         // Close button
-        closePopup.addEventListener("click", () => {
-            popup.classList.remove("show");
+        closePopup.addEventListener('click', function() {
+            popup.classList.remove('show');
         });
 
         // No Thanks button
-        skipPopup.addEventListener("click", (e) => {
+        skipPopup.addEventListener('click', function(e) {
             e.preventDefault();
-            popup.classList.remove("show");
+            popup.classList.remove('show');
         });
 
         // Form submit
-        newsletterForm.addEventListener("submit", (e) => {
+        newsletterForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            alert("Thank you for subscribing to Naomi Nail Studio!");
-            popup.classList.remove("show");
+            alert('Thank you for subscribing to Naomi Nail Studio!');
+            popup.classList.remove('show');
             newsletterForm.reset();
         });
 
@@ -137,8 +157,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // 3. ACTIVE NAVIGATION LINK HIGHLIGHT
     // ============================================
+    
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const allNavLinks = document.querySelectorAll('.navbar a, .footer-links a');
+    const allNavLinks = document.querySelectorAll('.navbar a');
     
     allNavLinks.forEach(function(link) {
         const linkHref = link.getAttribute('href');
@@ -153,6 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // 4. SMOOTH SCROLL FOR ANCHOR LINKS
     // ============================================
+    
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
         anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
@@ -172,6 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // 5. IMAGE LOADING WITH FADE-IN EFFECT
     // ============================================
+    
     const mainImage = document.getElementById('image');
     if (mainImage) {
         mainImage.style.opacity = '0';
@@ -193,6 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // 6. FOOTER YEAR AUTO-UPDATE
     // ============================================
+    
     const footerCopyright = document.querySelector('.copyright p');
     if (footerCopyright) {
         const currentYear = new Date().getFullYear();
@@ -202,6 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // 7. SCROLL-TO-TOP BUTTON
     // ============================================
+    
     if (!document.getElementById('scrollTopBtn')) {
         const scrollBtn = document.createElement('button');
         scrollBtn.id = 'scrollTopBtn';
@@ -252,23 +277,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ============================================
-    // 8. STICKY HEADER
+    // 8. KEYBOARD ACCESSIBILITY - ESC to close menu
     // ============================================
-    const header = document.querySelector('header');
     
-    if (header) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                header.classList.add('sticky');
-            } else {
-                header.classList.remove('sticky');
-            }
-        });
-    }
-
-    // ============================================
-    // 9. KEYBOARD ACCESSIBILITY - ESC to close menu
-    // ============================================
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && navbar && navbar.classList.contains('active')) {
             navbar.classList.remove('active');
@@ -282,8 +293,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ============================================
-    // 10. CONSOLE WELCOME
+    // 9. CONSOLE WELCOME
     // ============================================
+    
     console.log('%c💅 Naomi Nail-Studio', 'font-size: 24px; font-weight: bold; color: #9c6b98;');
     console.log('%cBeauty • Elegance • Confidence', 'font-size: 16px; color: #666;');
     console.log('%c✨ Thank you for visiting! ✨', 'font-size: 14px; color: #888;');
