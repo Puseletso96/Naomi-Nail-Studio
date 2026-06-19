@@ -26,6 +26,19 @@ body {
   line-height: 1.6;
   padding: 20px;
 }
+/* Make sure datetime is visible */
+.datetime {
+    display: block !important;
+    visibility: visible !important;
+    color: #333;
+    font-size: 14px;
+    padding: 10px 20px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
 
 /* ============================================
    HEADER & NAVIGATION
