@@ -1373,6 +1373,39 @@ form {
         padding: 12px 15px;
         width: 95%;
     }
+     /* Make sure menu button is always visible on mobile */
+    .menu-btn {
+        display: flex !important;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 15px;
+        font-size: 1.8rem;
+        background: rgba(156, 107, 152, 0.1);
+        border-radius: 10px;
+        border: 2px solid #9c6b98;
+        color: #9c6b98;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 101;
+        position: relative;
+        order: 2;
+    }
+
+    .menu-btn:hover {
+        background: rgba(156, 107, 152, 0.2);
+        transform: scale(1.02);
+    }
+
+    .menu-btn:active {
+        transform: scale(0.95);
+    }
+
+    .menu-btn .menu-text {
+        font-size: 0.85rem;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        color: #9c6b98;
+    }
 }
 
 /* Fix for header to ensure menu button stays in header */
